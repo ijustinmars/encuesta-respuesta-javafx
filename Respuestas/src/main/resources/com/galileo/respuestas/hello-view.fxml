@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="495.0" prefWidth="600.0"
+            xmlns="http://javafx.com/javafx/17.0.12"
+            xmlns:fx="http://javafx.com/fxml/1">
+
+    <padding>
+        <Insets top="16.0" right="16.0" bottom="16.0" left="16.0"/>
+    </padding>
+
+    <center>
+        <HBox spacing="16.0">
+
+            <VBox spacing="10.0" prefWidth="255.0">
+                <DatePicker promptText="Seleccionar fecha"/>
+
+                <TableView VBox.vgrow="ALWAYS">
+                    <columns>
+                        <TableColumn prefWidth="155.0" text="Pregunta"/>
+                        <TableColumn prefWidth="100.0" text="Respuestas"/>
+                    </columns>
+                </TableView>
+            </VBox>
+
+            <VBox spacing="12.0" prefWidth="281.0" HBox.hgrow="ALWAYS">
+
+                <BarChart title="Pregunta 1" VBox.vgrow="ALWAYS">
+                    <xAxis>
+                        <CategoryAxis label="Calificación" side="BOTTOM"/>
+                    </xAxis>
+                    <yAxis>
+                        <NumberAxis label="Cantidad" side="LEFT"/>
+                    </yAxis>
+                </BarChart>
+
+                <BarChart title="Pregunta 2" VBox.vgrow="ALWAYS">
+                    <xAxis>
+                        <CategoryAxis label="Calificación" side="BOTTOM"/>
+                    </xAxis>
+                    <yAxis>
+                        <NumberAxis label="Cantidad" side="LEFT"/>
+                    </yAxis>
+                </BarChart>
+
+                <HBox alignment="CENTER_RIGHT">
+                    <Button mnemonicParsing="false"
+                            text="Consultar Comentarios"/>
+                </HBox>
+
+            </VBox>
+        </HBox>
+    </center>
+</BorderPane>
